@@ -170,11 +170,11 @@ No warranty is provided. Predictions are for fun and educational purposes only!
 
 ## Acknowledgments
 
-🏁 Formula 1 for historical race data
-📰 F1 news websites for sentiment data
-🎰 Google Sports snippets and bookmaker sources for odds data
-📊 Kaggle datasets for historical performance data
-🧩 The open-source community for ML libraries
-☕️ And all the coffee that fueled this project!
+- 🏁 Formula 1 for historical race data
+- 📰 F1 news websites for sentiment data
+- 🎰 Google Sports snippets and bookmaker sources for odds data
+- 📊 Kaggle datasets for historical performance data
+- 🧩 The open-source community for ML libraries
+- ☕️ And all the coffee that fueled this project!
 
 
