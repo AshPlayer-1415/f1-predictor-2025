@@ -1,21 +1,38 @@
 # F1 Predictor 2025
 
-A comprehensive Formula 1 race prediction system that uses machine learning, news sentiment analysis, and betting odds to predict podium probabilities for upcoming races.
+A personal Formula 1 race prediction system by **Ashwinth Reddy**, designed for fun and learning purposes!
+
+This project combines machine learning, news sentiment analysis, and betting odds to predict podium probabilities for upcoming F1 races.  
+It is an open learning tool for anyone to explore, improve, and play with. 
+
+> **Disclaimer:** This is a personal academic project. Predictions are made for educational purposes only and are **not** financial or betting advice.
 
 ## Features
 
-- **Machine Learning Model**: Uses stacked ensemble of XGBoost, LightGBM, and CatBoost models to predict podium probabilities
-- **News Sentiment Analysis**: Incorporates sentiment from F1 news articles to adjust predictions
-- **Betting Odds Integration**: Compares model predictions with market odds from major bookmakers
-- **Dynamic Schedule Parser**: Automatically fetches and updates the F1 race calendar
-- **Visualization Dashboard**: Creates comprehensive visualizations of predictions and comparisons
-- **Automated Pipeline**: End-to-end automation of data collection, feature engineering, model training, and visualization
+-  **Machine Learning Model**  
+  Uses stacked ensemble of XGBoost, LightGBM, and CatBoost models to predict podium probabilities.
+  
+-  **News Sentiment Analysis**  
+  Incorporates sentiment from F1 news articles to adjust predictions dynamically.
+
+-  **Betting Odds Integration**  
+  Compares model predictions with market odds from major bookmakers. *(Manually sourced from Google Sports snippets and bookmaker websites.)*
+
+-  **Dynamic Schedule Parser**  
+  Automatically fetches and updates the F1 race calendar.
+
+-  **Visualization Dashboard**  
+  Creates clear visualizations of predictions and comparisons.
+
+-  **Automated Pipeline**  
+  End-to-end automation of data collection, feature engineering, model training, and visualizations.
+
 
 ## Installation
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/f1-predictor-2025.git
+git clone https://github.com/AshPlayer-1415/f1-predictor-2025.git
 cd f1-predictor-2025
 ```
 
@@ -30,10 +47,9 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-4. Set up API keys (optional):
+4. Run the full pipeline:
 ```bash
-# For betting odds API
-export ODDS_API_KEY="your_api_key_here"
+python src/master_pipeline.py --update-schedule --include-news --include-betting --create-visualizations
 ```
 
 ## Usage
@@ -95,7 +111,7 @@ f1-predictor-2025/
 │   ├── feature_engineering.py    # Feature engineering
 │   ├── model.py                  # Model training and prediction
 │   └── visualization.py          # Visualization generator
-├── notebooks/            # Jupyter notebooks for analysis
+├── notebooks/            # Jupyter notebooks for exploration (kept for future use) 
 ├── requirements.txt      # Project dependencies
 └── README.md            # Project documentation
 ```
@@ -118,27 +134,47 @@ The prediction model uses a stacked ensemble approach:
    - Betting odds (optional)
 
 3. **Output**:
-   - Podium probability for each driver in upcoming races
+   - Podium probability for each driver, per race
+
+4. **Challenges Faced**:
+   - Live data scraping restrictions (manual fallback for betting odds)
+   - Complex feature engineering (driver consistency, team synergy, circuit difficulty)
+   - Dynamic schedule updates and real-time predictions
+   - Integrating multiple models cleanly into one pipeline
+  
+5. **Solutions**:
+   - Robust error handling
+   - Modular design
+   - Manual data entry fallback
+   - And of course, support from our friendly neighbourhood ChatGPT!
 
 ## Visualization Dashboard
 
 The visualization dashboard includes:
 
-1. **Podium Probabilities**: Bar charts showing the probability of each driver finishing on the podium
-2. **Probability Comparison**: Side-by-side comparison of model predictions and betting odds
-3. **Race Calendar**: Overview of top 3 predicted drivers for each race in the season
+1. Podium Probabilities: Bar charts for each driver.
+2. Odds Comparison: Model prediction vs bookmaker odds.
+3. Race Calendar Overview: Predicted podium finishers per race.
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are very welcome!
+If you’d like to improve the model, add new features, or just experiment — feel free to fork, clone, and play around.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+No license restrictions.
+
+This is a personal project, open for public use, learning, and improvement.
+No warranty is provided. Predictions are for fun and educational purposes only!
 
 ## Acknowledgments
 
-- Formula 1 for race data
-- Various F1 news websites for content
-- Bookmakers for odds data
-- The open-source community for machine learning libraries
+🏁 Formula 1 for historical race data
+📰 F1 news websites for sentiment data
+🎰 Google Sports snippets and bookmaker sources for odds data
+📊 Kaggle datasets for historical performance data
+🧩 The open-source community for ML libraries
+☕️ And all the coffee that fueled this project!
+
+
